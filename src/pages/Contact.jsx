@@ -21,13 +21,14 @@ export default function Contact() {
   };
 
   const handleSubmit = (e) => {
+    console.log(import.meta.env.VITE_APP_SERVICE_ID);
     e.preventDefault();
     setIsLoading(true);
     setCurrentAnimation("hit");
     emailjs
       .send(
-        "service_pfot01o",
-        "template_qt31hid",
+        import.meta.env.VITE_APP_SERVICE_ID,
+        import.meta.env.VITE_APP_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Prejith",
@@ -35,7 +36,7 @@ export default function Contact() {
           to_email: "prejithpbackup@gmail.com",
           message: form.message,
         },
-        "zpsgPvMiC6RjqDhJv"
+        import.meta.env.VITE_APP_PUBLIC_KEY
       )
       .then(() => {
         setIsLoading(false);

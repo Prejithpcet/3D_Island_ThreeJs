@@ -11,9 +11,7 @@ export default function Navbar() {
       >
         <p className="blue-gradient_text">3D</p>
       </NavLink>
-      <p className="text-white font-bold text-[32px] font-mono">
-        Explore My World
-      </p>
+
       <nav className="flex text-lg gap-7 font-medium">
         <a
           href="https://www.quickfolio.me/prejithp-contact"
